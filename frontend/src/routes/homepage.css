@@ -1,0 +1,29 @@
+.mainContent {
+
+}
+
+.contentWrapper{
+  width: 1024px;
+  margin: 0 auto;
+}
+
+.carouselWrapper {
+  width: 1024px;
+  margin: 0 auto;
+}
+
+.mainContent hr {
+  margin: 20px 0;
+}
+
+.carouselWrapper :global .ant-carousel .slick-slide {
+  text-align: center;
+  height: 400px;
+  line-height: 400px;
+  background: #364d79;
+  overflow: hidden;
+}
+
+.carouselWrapper :global .ant-carousel .slick-slide h3 {
+  color: #fff;
+}

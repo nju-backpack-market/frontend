@@ -1,0 +1,7 @@
+.itemWrapper {
+  flex: 1;
+  flex-wrap: wrap;
+  width: 225px;
+  height: 160px;
+  border: #9E8876 3px;
+}

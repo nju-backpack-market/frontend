@@ -1,0 +1,11 @@
+.tab {
+  display: flex;
+  width: 600px;
+  margin-left: 30px;
+}
+
+.tabItem {
+  flex: 1;
+  font-size: 15px;
+  padding: 15px 0 10px 0;
+}

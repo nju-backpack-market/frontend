@@ -6,6 +6,20 @@ body {
   padding: 0;
 }
 
+hr {
+  color: #9E8876;
+  background-color: #9E8876;
+}
+
 .content {
   font-size: 15px;
+}
+
+.headerWrapper {
+  width: 100%;
+}
+
+.navbarWrapper {
+  width: 1024px;
+  margin: 0 auto;
 }

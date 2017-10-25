@@ -3,14 +3,17 @@
  */
 import React from 'react';
 import { connect } from 'dva';
+import styles from './itemInfo.css';
 
 function ItemInfo() {
   return (
     <div>
-      <h1>商品详细信息</h1>
-      <ul>
-        <p>这是一个很好的包</p>
-      </ul>
+      <div className={styles.infoArea}>
+        <h1>商品详细信息</h1>
+        <ul>
+          <p>这是一个很好的包</p>
+        </ul>
+      </div>
     </div>
   );
 }
