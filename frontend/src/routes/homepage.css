@@ -27,3 +27,25 @@
 .carouselWrapper :global .ant-carousel .slick-slide h3 {
   color: #fff;
 }
+
+.logistics {
+  margin: 40px auto;
+  float: left;
+  position: relative;
+  left: 50%;
+}
+
+.logisticsWrapper {
+  position: relative;
+  left: -50%;
+}
+
+.logistics div {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+.logistics2 {
+  height: 100px;
+}
+

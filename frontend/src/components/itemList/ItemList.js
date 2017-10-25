@@ -9,17 +9,16 @@ import styles from './itemList.css';
 function ItemList() {
   return (
     <div>
-      <h1>这里是商品列表</h1>
       <div className={styles.itemBox}>
-        <MainItem/>
-        <MainItem/>
-        <MainItem/>
-        <MainItem/>
-        <MainItem/>
-        <MainItem/>
-        <MainItem/>
-        <MainItem/>
-        <MainItem/>
+        <MainItem />
+        <MainItem />
+        <MainItem />
+        <MainItem />
+        <MainItem />
+        <MainItem />
+        <MainItem />
+        <MainItem />
+        <MainItem />
       </div>
     </div>
   );

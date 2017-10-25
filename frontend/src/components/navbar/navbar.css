@@ -9,3 +9,23 @@
   font-size: 15px;
   padding: 15px 0 10px 0;
 }
+
+.navWrapper {
+
+}
+
+.navItem {
+  display: inline-block;
+  vertical-align: top;
+}
+.input {
+  display: inline-block;
+  vertical-align: top;
+  margin-top: 6px;
+}
+
+.cart {
+  display: inline-block;
+  vertical-align: top;
+  margin: 10px 0 0 10px;
+}

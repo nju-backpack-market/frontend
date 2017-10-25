@@ -11,11 +11,11 @@ function Main({ children }) {
   return (
     <div>
       <div className={styles.headerWrapper}>
-        <Header/>
+        <Header />
       </div>
-      <hr/>
+      <hr />
       <div className={styles.navbarWrapper}>
-        <Navbar/>
+        <Navbar />
       </div>
       <div className={styles.content}>
         { children }

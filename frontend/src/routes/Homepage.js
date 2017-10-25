@@ -3,11 +3,12 @@
  */
 import React from 'react';
 import { connect } from 'dva';
-import { Carousel } from 'antd';
+import { Carousel, Input } from 'antd';
 import ItemList from '../components/itemList/ItemList';
 import styles from './homepage.css';
 
 function Homepage() {
+  const Search = Input.Search;
   return (
     <div className={styles.mainContent}>
       <div className={styles.carouselWrapper}>
@@ -18,9 +19,22 @@ function Homepage() {
           <div><h3>4</h3></div>
         </Carousel>
       </div>
-      <hr/>
+      <div className={styles.logistics}>
+        <div className={styles.logisticsWrapper}>
+        <div>Logistics information query</div>
+        <div className={styles.logisticsInput}>
+          <Search
+            placeholder="Input Your Order ID"
+            style={{ width: 300 }}
+            onSearch={value => console.log(value)}
+          />
+        </div>
+        </div>
+      </div>
+      <div className={styles.logistics2} />
+      <hr />
       <div className={styles.contentWrapper}>
-        <ItemList/>
+        <ItemList />
       </div>
     </div>
   );

@@ -12,7 +12,7 @@ const Header = () => {
           这是一个header
         </div>
       </div>
-      <div className={styles.logo}></div>
+      <div className={styles.logo} />
     </div>
   );
 };
