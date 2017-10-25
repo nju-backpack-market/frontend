@@ -1,13 +1,40 @@
-import React from 'react';
-import { Router, Route } from 'dva/router';
-import IndexPage from './routes/IndexPage';
+import React, { PropTypes } from 'react';
+import { Router } from 'dva/router';
+import Main from './routes/Main';
+import Admin from './routes/Admin';
 
-function RouterConfig({ history }) {
-  return (
-    <Router history={history}>
-      <Route path="/" component={IndexPage} />
-    </Router>
-  );
+const Routers = function ({ history }) {
+  const routes = [
+      {
+        path: '/',
+        component: Main,
+        getIndexRoute (nextState, cb) {
+          require.ensure([], require => {
+            // registerModel(app, require('./models/example'))
+            cb(null, { component: require('./routes/ItemList') })
+          }, 'itemList')
+        },
+        childRoutes: [
+          {
+            path: 'item',
+            getComponent (nextState, cb) {
+              require.ensure([], require => {
+                cb(null, require('./routes/ItemInfo'))
+              },'main')
+            }}
+        ],
+      },
+      {
+        path: '/admin',
+        component: Admin,
+      }
+  ]
+
+  return <Router history={history} routes={routes} />
 }
 
-export default RouterConfig;
+Routers.propTypes = {
+  history: PropTypes.object,
+}
+
+export default Routers;
