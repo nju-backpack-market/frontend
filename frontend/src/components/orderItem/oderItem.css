@@ -1,0 +1,33 @@
+.itemWrapper {
+  display: flex;
+  align-items: center;
+}
+
+.itemTab0 {
+  flex: 3;
+  text-align: center;
+  padding: 10px 0;
+}
+
+.itemTab {
+  flex: 1;
+  text-align: center;
+  padding: 10px 0;
+}
+
+.itemPic {
+  display: inline-block;
+  vertical-align: middle;
+  width: 80px;
+  height: 90px;
+  overflow: hidden;
+}
+
+.itemName {
+  display: inline-block;
+  font-size: 15px;
+  height: 22px;
+  max-width: 300px;
+  overflow: hidden;
+  margin-left: 5px;
+}

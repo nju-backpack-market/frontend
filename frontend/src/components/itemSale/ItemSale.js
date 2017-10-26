@@ -19,10 +19,14 @@ const ItemSale = () => {
           <div>{ intro }</div>
         </div>
         <hr />
-        <Button type="primary">ADD TO CART</Button>
-        <Link to={'/shopping'}>
-          <Button type="primary">BUY NOW</Button>
-        </Link>
+        <div className={styles.cartButton}>
+          <Button type="primary">ADD TO CART</Button>
+        </div>
+        <div className={styles.buyButton}>
+          <Link to={'/shopping'}>
+            <Button type="primary">BUY NOW</Button>
+          </Link>
+        </div>
       </div>
     </div>
   );
