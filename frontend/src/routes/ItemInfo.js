@@ -4,15 +4,18 @@
 import React from 'react';
 import { connect } from 'dva';
 import styles from './itemInfo.css';
+import ItemDes from '../components/itemDes/ItemDes';
+import ItemSale from '../components/itemSale/ItemSale';
 
 function ItemInfo() {
   return (
     <div>
       <div className={styles.infoArea}>
-        <h1>商品详细信息</h1>
-        <ul>
-          <p>这是一个很好的包</p>
-        </ul>
+        <ItemSale />
+      </div>
+      <hr/>
+      <div className={styles.DesArea}>
+        <ItemDes />
       </div>
     </div>
   );

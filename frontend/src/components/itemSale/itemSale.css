@@ -1,0 +1,31 @@
+.itemPic {
+  display: inline-block;
+  vertical-align: top;
+  width: 400px;
+  height: 445px;
+  overflow: hidden;
+}
+
+.details {
+  display: inline-block;
+  vertical-align: top;
+  width: 600px;
+  margin-left: 24px;
+}
+
+.details button {
+  width: 200px;
+  height: 50px;
+}
+
+.details button span{
+  font-size: 18px;
+}
+
+.generalInfo {
+  width: 400px;
+}
+
+.details hr {
+  margin: 10px 0;
+}

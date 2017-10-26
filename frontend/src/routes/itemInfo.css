@@ -1,4 +1,9 @@
 .infoArea {
   width: 1024px;
+  margin: 30px auto 0 auto;
+}
+
+.DesArea {
+  width: 1024px;
   margin: 0 auto;
 }

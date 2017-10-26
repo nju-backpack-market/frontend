@@ -21,14 +21,14 @@ function Homepage() {
       </div>
       <div className={styles.logistics}>
         <div className={styles.logisticsWrapper}>
-        <div>Logistics information query</div>
-        <div className={styles.logisticsInput}>
-          <Search
-            placeholder="Input Your Order ID"
-            style={{ width: 300 }}
-            onSearch={value => console.log(value)}
-          />
-        </div>
+          <div>Logistics information query</div>
+          <div className={styles.logisticsInput}>
+            <Search
+              placeholder="Input Your Order ID"
+              style={{ width: 300 }}
+              onSearch={value => console.log(value)}
+            />
+          </div>
         </div>
       </div>
       <div className={styles.logistics2} />
