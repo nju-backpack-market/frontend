@@ -6,9 +6,7 @@ import styles from './footer.css';
 
 const Footer = () => {
   return (
-    <div className={styles.footerWrapper}>
-
-    </div>
+    <div className={styles.footerWrapper} />
   );
 };
 
