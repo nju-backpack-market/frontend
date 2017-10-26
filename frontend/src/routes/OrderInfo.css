@@ -1,0 +1,31 @@
+.contentWrapper {
+  width: 1024px;
+  margin: 0 auto;
+}
+
+.progressBar {
+  width: 500px;
+  margin: 40px auto;
+}
+
+.orderDetail {
+  width: 100%;
+  border: 2px solid #9E8876;
+  border-radius: 10px;
+  padding: 5px 10px;
+}
+
+.detailHeader {
+  display: flex;
+  padding: 10px 0;
+}
+
+.headerTab0 {
+  flex: 3;
+  text-align: center;
+}
+
+.headerTab {
+  flex: 1;
+  text-align: center;
+}

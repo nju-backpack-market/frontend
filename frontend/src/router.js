@@ -24,6 +24,14 @@ const Routers = function ({ history }) {
             }, 'main');
           },
         },
+        {
+          path: 'shopping',
+          getComponent(nextState, cb) {
+            require.ensure([], require => {
+              cb(null, require('./routes/OrderInfo'));
+            }, 'main');
+          },
+        },
       ],
     },
     {

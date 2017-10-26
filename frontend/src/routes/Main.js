@@ -20,7 +20,6 @@ function Main({ children }) {
       <div className={styles.content}>
         { children }
       </div>
-      <p>{ '管理的路由：\'/admin\'' }</p>
     </div>
   );
 }
