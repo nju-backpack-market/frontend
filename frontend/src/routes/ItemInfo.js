@@ -13,7 +13,7 @@ function ItemInfo() {
       <div className={styles.infoArea}>
         <ItemSale />
       </div>
-      <hr/>
+      <hr />
       <div className={styles.DesArea}>
         <ItemDes />
       </div>

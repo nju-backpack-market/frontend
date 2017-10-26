@@ -1,6 +1,9 @@
 {
   "entry": "src/index.js",
   "disableCSSModules": false,
+  "theme": {
+      "@primary-color": "#8b7567"
+    },
   "env": {
     "development": {
       "extraBabelPlugins": [
