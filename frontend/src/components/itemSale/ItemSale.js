@@ -11,7 +11,13 @@ const ItemSale = () => {
   return (
     <div>
       <div className={styles.itemPic}>
-        <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1508953487730&di=f2758e70d496d28cad02859a90a04fe7&imgtype=0&src=http%3A%2F%2Fimg002.hc360.cn%2Fy4%2FM06%2F9C%2FA9%2FwKhQiFVVmXGEBPTzAAAAAPx5M2A001.jpg" alt="" width="400" />
+        <img
+          src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1508953487730&di=f2758e70d4
+            96d28cad02859a90a04fe7&imgtype=0&src=http%3A%2F%2Fimg002.hc360.cn%2Fy4%2FM06%2F9C%2FA9%2FwKhQiFVVmXGEB
+            PTzAAAAAPx5M2A001.jpg"
+          alt=""
+          width="400"
+        />
       </div>
       <div className={styles.details}>
         <div className={styles.generalInfo}>
