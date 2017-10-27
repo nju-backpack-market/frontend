@@ -6,6 +6,7 @@ import { connect } from 'dva';
 import styles from './main.css';
 import Navbar from '../components/navbar/Navbar';
 import Header from '../components/header/Header';
+import Footer from '../components/footer/Footer';
 
 function Main({ children }) {
   return (
@@ -20,7 +21,7 @@ function Main({ children }) {
       <div className={styles.content}>
         { children }
       </div>
-      <p>{ '管理的路由：\'/admin\'' }</p>
+      <Footer />
     </div>
   );
 }

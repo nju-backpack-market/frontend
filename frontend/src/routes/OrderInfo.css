@@ -1,0 +1,78 @@
+.contentWrapper {
+  width: 1024px;
+  margin: 0 auto;
+}
+
+.progressBar {
+  width: 500px;
+  margin: 40px auto;
+}
+
+.orderDetail {
+  width: 100%;
+  border: 2px solid #9E8876;
+  border-radius: 10px;
+  padding: 5px 20px;
+}
+
+.detailHeader {
+  display: flex;
+  padding: 10px 0;
+}
+
+.headerTab0 {
+  flex: 3;
+  text-align: center;
+}
+
+.headerTab {
+  flex: 1;
+  text-align: center;
+}
+
+.userInfo {
+  margin: 30px 0 30px 0;
+  width: 100%;
+  border: 2px solid #9E8876;
+  border-radius: 10px;
+  padding: 5px 10px;
+}
+
+.userHeader {
+  padding: 10px 30px;
+  font-size: 20px;
+}
+
+.detailContent {
+  padding: 10px 20px;
+}
+
+.detailContent span{
+  width: 80px;
+  display: inline-block;
+}
+
+.clientName input{
+  width: 300px;
+  margin: 10px 0;
+}
+
+.clientAddress input{
+  width: 450px;
+  margin: 10px 0;
+}
+
+.clientPhone input{
+  width: 300px;
+  margin: 10px 0;
+}
+
+.confirmWrapper {
+  text-align: center;
+}
+
+.confirmWrapper button {
+  width: 250px;
+  font-size: 20px;
+  height: 50px;
+}

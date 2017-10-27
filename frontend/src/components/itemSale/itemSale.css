@@ -29,3 +29,12 @@
 .details hr {
   margin: 10px 0;
 }
+
+.cartButton {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+.buyButton {
+  display: inline-block;
+}

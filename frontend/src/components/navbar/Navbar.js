@@ -3,6 +3,7 @@
  */
 import React from 'react';
 import { Input } from 'antd';
+import { Link } from 'dva/router';
 import styles from './navbar.css';
 
 const Navbar = () => {
@@ -12,7 +13,9 @@ const Navbar = () => {
       <div className={styles.navItem}>
         <div className={styles.tab}>
           <div className={styles.tabItem}>
-            HOME
+            <Link to={'/'}>
+              HOME
+            </Link>
           </div>
           <div className={styles.tabItem}>
             TAB2

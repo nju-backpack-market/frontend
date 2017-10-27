@@ -3,9 +3,11 @@
  */
 import React from 'react';
 import { Button } from 'antd';
+import { Link } from 'dva/router';
 import styles from './itemSale.css';
 
 const ItemSale = () => {
+  const intro = 'Winner of Outside Magazine\'s Gear of the Year Award for 2017, the Aether AG™ 70 is the perfect backpacking solution when your primary concerns are carrying heavy loads in ventilated comfort for bigger trips and weeklong-plus excursions.Now featuring our innovative Anti-Gravity™ technology and custom fit along with an incredibly robust feature set and a top lid that converts to a functional daypack or summit pack.';
   return (
     <div>
       <div className={styles.itemPic}>
@@ -20,19 +22,17 @@ const ItemSale = () => {
       <div className={styles.details}>
         <div className={styles.generalInfo}>
           <div>AETHER AG™ 70 WITH RAINCOVER</div>
-          <div>Winner of Outside Magazine's Gear of the Year
-            Award for 2017, the Aether AG™ 70 is the perfect
-            backpacking solution when your primary
-            concerns are carrying heavy loads in ventilated comfort for
-            bigger trips and weeklong-plus excursions.
-            Now featuring our innovative Anti-Gravity™ technology
-            and custom fit along with an incredibly
-            robust feature set and a top lid that converts to a
-            functional daypack or summit pack.</div>
+          <div>{ intro }</div>
         </div>
         <hr />
-        <Button type="primary">ADD TO CART</Button>
-        <Button type="primary">BUY NOW</Button>
+        <div className={styles.cartButton}>
+          <Button type="primary">ADD TO CART</Button>
+        </div>
+        <div className={styles.buyButton}>
+          <Link to={'/shopping'}>
+            <Button type="primary">BUY NOW</Button>
+          </Link>
+        </div>
       </div>
     </div>
   );

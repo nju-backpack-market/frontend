@@ -15,6 +15,3 @@ ItemDes.propTypes = {
 };
 
 export default ItemDes;
-/**
- * Created by paranoia on 2017/10/26.
- */
