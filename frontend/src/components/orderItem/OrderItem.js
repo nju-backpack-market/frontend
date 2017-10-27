@@ -2,6 +2,7 @@
  * Created by paranoia on 2017/10/26.
  */
 import React from 'react';
+import { Icon, Button } from 'antd';
 import styles from './oderItem.css';
 
 const OrderItem = () => {
@@ -27,7 +28,7 @@ const OrderItem = () => {
           11
         </div>
         <div className={styles.itemTab}>
-          11
+          <Button className={styles.deleteButton}><Icon type="delete" /></Button>
         </div>
       </div>
       <hr />

@@ -44,27 +44,23 @@
 }
 
 .detailContent {
-  padding: 10px 20px;
+  padding: 10px;
 }
 
-.detailContent span{
-  width: 80px;
-  display: inline-block;
+.userDetailContent {
+  padding: 30px 20px 10px 20px;
 }
 
 .clientName input{
   width: 300px;
-  margin: 10px 0;
 }
 
 .clientAddress input{
   width: 450px;
-  margin: 10px 0;
 }
 
 .clientPhone input{
   width: 300px;
-  margin: 10px 0;
 }
 
 .confirmWrapper {
@@ -75,4 +71,8 @@
   width: 250px;
   font-size: 20px;
   height: 50px;
+}
+
+.confirmWrapper :global .ant-col-sm-offset-6 {
+  margin-left: 0;
 }

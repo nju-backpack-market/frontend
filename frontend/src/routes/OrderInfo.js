@@ -33,69 +33,58 @@ function OrderInfo() {
           sm: { span: 14 },
         },
       };
-      const tailFormItemLayout = {
-        wrapperCol: {
-          xs: {
-            span: 24,
-            offset: 0,
-          },
-          sm: {
-            span: 14,
-            offset: 6,
-          },
-        },
-      };
 
       return (
         <Form onSubmit={this.handleSubmit}>
-          <FormItem
-            {...formItemLayout}
-            label={(
-              <span>
-              Name&nbsp;
-            </span>
-            )}
-            hasFeedback
-          >
-            {getFieldDecorator('name', {
-              rules: [{ required: true, message: 'Please input your name!', whitespace: true }],
-            })(
-              <Input />,
-            )}
-          </FormItem>
-          <FormItem
-            {...formItemLayout}
-            label={(
-              <span>
-              Address&nbsp;
-            </span>
-            )}
-            hasFeedback
-          >
-            {getFieldDecorator('address', {
-              rules: [{ required: true, message: 'Please input your address!', whitespace: true }],
-            })(
-              <Input />,
-            )}
-          </FormItem>
-          <FormItem
-            {...formItemLayout}
-            label={(
-              <span>
-              Phone&nbsp;
-            </span>
-            )}
-            hasFeedback
-          >
-            {getFieldDecorator('phone', {
-              rules: [{ required: true, message: 'Please input your phone!', whitespace: true }],
-            })(
-              <Input />,
-            )}
-          </FormItem>
-          <FormItem {...tailFormItemLayout}>
-            <Button type="primary" htmlType="submit">Register</Button>
-          </FormItem>
+          <div className={styles.userInfo}>
+            <div className={styles.userHeader}>
+              DELIVERED INFORMATION
+            </div>
+            <hr />
+            <div className={styles.userDetailContent}>
+              <FormItem className={styles.clientName} {...formItemLayout}
+                label={(
+                  <span>Name&nbsp;</span>
+                )}
+                hasFeedback
+              >
+                {getFieldDecorator('name', {
+                  rules: [{ required: true, message: 'Please input your name!', whitespace: true }],
+                })(
+                  <Input />,
+                )}
+              </FormItem>
+              <FormItem className={styles.clientAddress} {...formItemLayout}
+                label={(
+                  <span>Address&nbsp;</span>
+                )}
+                hasFeedback
+              >
+                {getFieldDecorator('address', {
+                  rules: [{ required: true, message: 'Please input your address!', whitespace: true }],
+                })(
+                  <Input />,
+                )}
+              </FormItem>
+              <FormItem className={styles.clientPhone} {...formItemLayout}
+                label={(
+                  <span>Phone&nbsp;</span>
+                )}
+                hasFeedback
+              >
+                {getFieldDecorator('phone', {
+                  rules: [{ required: true, message: 'Please input your phone!', whitespace: true }],
+                })(
+                  <Input />,
+                )}
+              </FormItem>
+            </div>
+          </div>
+          <div className={styles.confirmWrapper}>
+            <FormItem>
+              <Button type="primary" htmlType="submit">Confirm</Button>
+            </FormItem>
+          </div>
         </Form>
       );
     }
@@ -125,29 +114,6 @@ function OrderInfo() {
           <OrderItem />
           <OrderItem />
         </div>
-      </div>
-      <div className={styles.userInfo}>
-        <div className={styles.userHeader}>
-          DELIVERED INFORMATION
-        </div>
-        <hr />
-        <div className={styles.detailContent}>
-          <div className={styles.clientName}>
-            <span>Name</span>
-            <Input placeholder="" />
-          </div>
-          <div className={styles.clientAddress}>
-            <span>Address</span>
-            <Input placeholder="" />
-          </div>
-          <div className={styles.clientPhone}>
-            <span>Phone</span>
-            <Input placeholder="" />
-          </div>
-        </div>
-      </div>
-      <div className={styles.confirmWrapper}>
-        <Button type="primary">CONFIRM</Button>
       </div>
       <WrappedRegistrationForm />
     </div>

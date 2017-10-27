@@ -31,3 +31,11 @@
   overflow: hidden;
   margin-left: 5px;
 }
+
+.deleteButton {
+  border: none 0px;
+  padding: 0px;
+  height: auto;
+  font-size: 20px;
+  margin: 0 auto;
+}
