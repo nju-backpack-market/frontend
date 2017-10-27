@@ -7,9 +7,9 @@ import Homepage from './routes/Homepage';
 import ItemInfo from './routes/ItemInfo';
 import OrderInfo from './routes/OrderInfo';
 
-function Routers({ browserHistory }) {
+function Routers({ history }) {
   return (
-    <Router history={browserHistory}>
+    <Router history={history}>
       <Route path="/" component={Main}>
         <IndexRoute component={Homepage} />
         <Route path="item" component={ItemInfo} />

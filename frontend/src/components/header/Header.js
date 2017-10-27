@@ -3,6 +3,9 @@
  */
 import React from 'react';
 import styles from './header.css';
+import zh_CN from '../../utils/zh_CN';
+import en_US from '../../utils/en_US';
+import intl from 'intl';
 
 const Header = () => {
   return (
@@ -19,13 +22,5 @@ const Header = () => {
 
 Header.propTypes = {
 };
-
-// const styles = {
-//   header: {
-//     backgroundColor: '#9E8876',
-//     height: 70,
-//     width: 400,
-//   },
-// }
 
 export default Header;
