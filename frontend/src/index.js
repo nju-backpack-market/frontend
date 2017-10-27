@@ -1,6 +1,5 @@
 import dva from 'dva';
 import { browserHistory } from 'dva/router';
-import { FormattedMessage } from 'react-intl';
 import './index.css';
 
 // 1. Initialize

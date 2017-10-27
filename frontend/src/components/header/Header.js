@@ -3,9 +3,6 @@
  */
 import React from 'react';
 import styles from './header.css';
-import zh_CN from '../../utils/zh_CN';
-import en_US from '../../utils/en_US';
-import intl from 'intl';
 
 const Header = () => {
   return (

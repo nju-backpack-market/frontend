@@ -60,7 +60,7 @@ function OrderInfo() {
             {getFieldDecorator('name', {
               rules: [{ required: true, message: 'Please input your name!', whitespace: true }],
             })(
-              <Input />
+              <Input />,
             )}
           </FormItem>
           <FormItem
@@ -75,7 +75,7 @@ function OrderInfo() {
             {getFieldDecorator('address', {
               rules: [{ required: true, message: 'Please input your address!', whitespace: true }],
             })(
-              <Input />
+              <Input />,
             )}
           </FormItem>
           <FormItem
@@ -90,7 +90,7 @@ function OrderInfo() {
             {getFieldDecorator('phone', {
               rules: [{ required: true, message: 'Please input your phone!', whitespace: true }],
             })(
-              <Input />
+              <Input />,
             )}
           </FormItem>
           <FormItem {...tailFormItemLayout}>
@@ -149,7 +149,7 @@ function OrderInfo() {
       <div className={styles.confirmWrapper}>
         <Button type="primary">CONFIRM</Button>
       </div>
-      {/*<WrappedRegistrationForm />*/}
+      <WrappedRegistrationForm />
     </div>
   );
 }
