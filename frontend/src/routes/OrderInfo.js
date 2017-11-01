@@ -42,7 +42,9 @@ function OrderInfo() {
             </div>
             <hr />
             <div className={styles.userDetailContent}>
-              <FormItem className={styles.clientName} {...formItemLayout}
+              <FormItem
+                className={styles.clientName}
+                {...formItemLayout}
                 label={(
                   <span>Name&nbsp;</span>
                 )}
@@ -54,7 +56,9 @@ function OrderInfo() {
                   <Input />,
                 )}
               </FormItem>
-              <FormItem className={styles.clientAddress} {...formItemLayout}
+              <FormItem
+                className={styles.clientAddress}
+                {...formItemLayout}
                 label={(
                   <span>Address&nbsp;</span>
                 )}
@@ -66,7 +70,9 @@ function OrderInfo() {
                   <Input />,
                 )}
               </FormItem>
-              <FormItem className={styles.clientPhone} {...formItemLayout}
+              <FormItem
+                className={styles.clientPhone}
+                {...formItemLayout}
                 label={(
                   <span>Phone&nbsp;</span>
                 )}

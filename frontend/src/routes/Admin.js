@@ -7,8 +7,7 @@ import { connect } from 'dva';
 import Header from '../components/header/Header';
 import styles from './admin.less';
 import GoodsManagePane from '../components/goodsManagePane/GoodsManagePane';
-import GoodsManageItem from '../components/goodsManageItem/GoodsManageItem';
-
+import OrderMangePane from '../components/orderManagePane/OrderManagePane';
 
 const Content = Layout.Content;
 const TabPane = Tabs.TabPane;
@@ -23,7 +22,7 @@ function Admin() {
             defaultKey={1}
           >
             <TabPane tab="订单管理" key={1}>
-              <GoodsManageItem />
+              <OrderMangePane />
             </TabPane>
             <TabPane tab="商品管理" key={2}>
               <GoodsManagePane />
@@ -31,8 +30,8 @@ function Admin() {
           </Tabs>
         </div>
       </Content>
-    </Layout
-    >);
+    </Layout>
+  );
 }
 
 Admin.propTypes = {
