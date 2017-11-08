@@ -2,36 +2,24 @@
  * Created by paranoia on 2017/10/24.
  */
 import React from 'react';
-import { Layout, Tabs } from 'antd';
+import { Layout } from 'antd';
 import { connect } from 'dva';
 import Header from '../components/header/Header';
-import styles from './admin.less';
-import GoodsManagePane from '../components/goodsManagePane/GoodsManagePane';
-import OrderMangePane from '../components/orderManagePane/OrderManagePane';
+import AdminContent from '../components/adminContent/AdminContent';
 
 const Content = Layout.Content;
-const TabPane = Tabs.TabPane;
 
-function Admin() {
-  return (
-    <Layout style={{ backgroundColor: 'white' }}>
-      <Header />
-      <Content>
-        <div className={styles.tabNav}>
-          <Tabs
-            defaultKey={1}
-          >
-            <TabPane tab="订单管理" key={1}>
-              <OrderMangePane />
-            </TabPane>
-            <TabPane tab="商品管理" key={2}>
-              <GoodsManagePane />
-            </TabPane>
-          </Tabs>
-        </div>
-      </Content>
-    </Layout>
-  );
+class Admin extends React.Component {
+  render() {
+    return (
+      <Layout style={{ backgroundColor: 'white' }}>
+        <Header />
+        <Content>
+          <AdminContent />
+        </Content>
+      </Layout>
+    );
+  }
 }
 
 Admin.propTypes = {

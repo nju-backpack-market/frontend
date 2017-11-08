@@ -21,9 +21,11 @@ class OrderManageItem extends React.Component {
             <Col span={5}><span>状态</span></Col>
           </Row>
         </div>
-        <OrderGoodsItem />
-        <OrderGoodsItem />
-        <OrderGoodsItem />
+        <div>
+          <OrderGoodsItem />
+          <OrderGoodsItem />
+          <OrderGoodsItem />
+        </div>
         <div className={styles.tableBottomContent}>
           <Button type="primary">详细信息</Button>
           <Button type="primary" style={{ marginLeft: 20 }}>发货</Button>

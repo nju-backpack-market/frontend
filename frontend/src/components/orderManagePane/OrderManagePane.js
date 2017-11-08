@@ -27,11 +27,14 @@ class OrderManagePane extends React.Component {
           <Search
             placeholder="订单号"
             style={{ width: 250 }}
+            onSearch={value => console.log(value)}
           />
         </div>
         <RangePicker />
-        <OrderManageItem />
-        <OrderManageItem />
+        <div>
+          <OrderManageItem />
+          <OrderManageItem />
+        </div>
         <Pagination />
       </div>
     );
