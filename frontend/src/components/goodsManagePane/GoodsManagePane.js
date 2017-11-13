@@ -3,6 +3,7 @@ import { connect } from 'dva';
 import { Input } from 'antd';
 import GoodsManageItem from '../goodsManageItem/GoodsManageItem';
 import styles from './goodsManagePane.less';
+import AddGoodsBtn from './AddGoodsBtn';
 
 const Search = Input.Search;
 
@@ -26,6 +27,7 @@ class GoodsManagePane extends React.Component {
           <GoodsManageItem />
           <GoodsManageItem />
           <GoodsManageItem />
+          <AddGoodsBtn />
         </div>
       </div>
     );
