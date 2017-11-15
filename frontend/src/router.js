@@ -6,6 +6,7 @@ import Admin from './routes/Admin';
 import Homepage from './routes/Homepage';
 import ItemInfo from './routes/ItemInfo';
 import OrderInfo from './routes/OrderInfo';
+import AddItemPage from './routes/AddItemPage';
 
 function Routers({ history }) {
   return (
@@ -16,6 +17,7 @@ function Routers({ history }) {
         <Route path="shopping" component={OrderInfo} />
       </Route>
       <Route path="/admin" component={Admin} />
+      <Route path="/admin-newPack" component={AddItemPage} />
     </Router>
   );
 }

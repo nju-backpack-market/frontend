@@ -16,8 +16,11 @@
     "dva": "^1.2.1",
     "intl": "^1.2.5",
     "react": "^15.4.0",
+    "react-avatar-editor": "^10.3.0",
     "react-dom": "^15.4.0",
-    "react-intl": "^2.4.0"
+    "react-html5video": "^2.5.1",
+    "react-intl": "^2.4.0",
+    "reset-css": "^2.2.1"
   },
   "devDependencies": {
     "babel-eslint": "^7.1.1",

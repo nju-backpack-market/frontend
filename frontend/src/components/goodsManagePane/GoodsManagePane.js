@@ -1,9 +1,8 @@
 import React from 'react';
 import { connect } from 'dva';
-import { Input } from 'antd';
+import { Input, Button } from 'antd';
 import GoodsManageItem from '../goodsManageItem/GoodsManageItem';
 import styles from './goodsManagePane.less';
-import AddGoodsBtn from './AddGoodsBtn';
 
 const Search = Input.Search;
 
@@ -11,10 +10,11 @@ class GoodsManagePane extends React.Component {
   render() {
     return (
       <div className={styles.goodsListWrapper}>
-        <div>
+        <div style={{ display: 'flex', justifyContent: 'flex-end' }}>
+          <Button type="primary">添加商品</Button>
           <Search
             placeholder="商品编号"
-            style={{ width: 200, marginLeft: 810 }}
+            style={{ width: 200, marginLeft: 50 }}
           />
         </div>
         <div className={styles.goodsList}>
@@ -27,7 +27,7 @@ class GoodsManagePane extends React.Component {
           <GoodsManageItem />
           <GoodsManageItem />
           <GoodsManageItem />
-          <AddGoodsBtn />
+          <GoodsManageItem />
         </div>
       </div>
     );
