@@ -11,7 +11,7 @@ export default {
   subscriptions: {
   },
   effects: {
-    *queryDetail({ payload }, { call, put }) {
+    *queryDetail({ payload }, { call }) {
       yield call(query);
     },
   },

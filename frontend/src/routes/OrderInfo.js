@@ -116,9 +116,9 @@ function OrderInfo() {
         </div>
         <hr />
         <div className={styles.detailContent}>
-          <OrderItem id="001"/>
-          <OrderItem id="002"/>
-          <OrderItem id="003"/>
+          <OrderItem id="001" />
+          <OrderItem id="002" />
+          <OrderItem id="003" />
         </div>
       </div>
       <WrappedRegistrationForm />

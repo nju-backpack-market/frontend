@@ -8,7 +8,7 @@ import ItemList from '../components/homepageItemList/ItemList';
 import styles from './homepage.css';
 
 class OrderMessageBox extends React.Component {
-  state = { visible: false }
+  state = { visible: false };
   showModal = () => {
     this.setState({
       visible: true,
@@ -63,7 +63,6 @@ class OrderMessageBox extends React.Component {
 }
 
 function Homepage({ dispatch }) {
-
   function test() {
     dispatch({
       type: 'products/getAll',

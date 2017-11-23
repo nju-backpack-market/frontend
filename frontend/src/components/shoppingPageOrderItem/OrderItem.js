@@ -23,7 +23,7 @@ class OrderItem extends React.Component {
         <div className={styles.itemWrapper}>
           <div className={styles.itemTab0}>
             <div className={styles.itemPic}>
-              <img src={picSrc} alt="" width="80"/>
+              <img src={picSrc} alt="" width="80" />
             </div>
             <div className={styles.itemName}>
               AETHER AG™ 70 WITH RAINCOVER
@@ -39,14 +39,14 @@ class OrderItem extends React.Component {
             11
           </div>
           <div className={styles.itemTab}>
-            <Button className={styles.deleteButton} onClick={this.deleteItem}><Icon type="delete"/></Button>
+            <Button className={styles.deleteButton} onClick={this.deleteItem}><Icon type="delete" /></Button>
           </div>
         </div>
         <hr />
       </div>
     );
   }
-};
+}
 
 OrderItem.propTypes = {
 };

@@ -3,7 +3,6 @@
  */
 import React from 'react';
 import { connect } from 'dva';
-import styles from './orderClientQueryInfo.css';
 
 function OrderClientQueryInfo() {
   return (
@@ -13,7 +12,7 @@ function OrderClientQueryInfo() {
   );
 }
 
-ItemList.propTypes = {
+OrderClientQueryInfo.propTypes = {
 };
 
 export default connect()(OrderClientQueryInfo);
