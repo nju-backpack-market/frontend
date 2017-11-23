@@ -76,3 +76,17 @@
 .confirmWrapper :global .ant-col-sm-offset-6 {
   margin-left: 0;
 }
+
+:global .ant-steps .ant-steps-title {
+  background-color: transparent;
+}
+
+:global .ant-steps .ant-steps-head {
+  background-color: transparent;
+}
+
+@media (min-width: 768px) {
+  :global .ant-col-sm-6 {
+    width: 10%;
+  }
+}

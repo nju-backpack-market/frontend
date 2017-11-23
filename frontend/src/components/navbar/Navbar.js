@@ -2,7 +2,7 @@
  * Created by paranoia on 2017/10/24.
  */
 import React from 'react';
-import { Input } from 'antd';
+import { Input, Icon } from 'antd';
 import { Link } from 'dva/router';
 import styles from './navbar.css';
 
@@ -39,7 +39,7 @@ const Navbar = () => {
         />
       </div>
       <div className={styles.cart}>
-        购物车
+        <Icon type="shopping-cart" />
       </div>
     </div>
   );

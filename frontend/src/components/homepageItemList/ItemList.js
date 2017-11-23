@@ -3,7 +3,7 @@
  */
 import React from 'react';
 import { connect } from 'dva';
-import MainItem from '../mainItem/MainItem';
+import MainItem from '../homepageMainItem/MainItem';
 import styles from './itemList.css';
 
 function ItemList() {

@@ -29,7 +29,7 @@ function Routers({ history }) {
 //         require.ensure([], require => {
 //           // registerModel(app, require('./models/example'))
 //           cb(null, { component: require('./routes/Homepage') });
-//         }, 'itemList');
+//         }, 'homepageItemList');
 //       },
 //       childRoutes: [
 //         {

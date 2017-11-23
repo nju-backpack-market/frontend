@@ -5,7 +5,7 @@ import React from 'react';
 import { connect } from 'dva';
 import { Steps, Input, Button, Form } from 'antd';
 import styles from './OrderInfo.css';
-import OrderItem from '../components/orderItem/OrderItem';
+import OrderItem from '../components/shoppingPageOrderItem/OrderItem';
 
 function OrderInfo() {
   const Step = Steps.Step;
@@ -42,7 +42,9 @@ function OrderInfo() {
             </div>
             <hr />
             <div className={styles.userDetailContent}>
-              <FormItem className={styles.clientName} {...formItemLayout}
+              <FormItem
+                className={styles.clientName}
+                {...formItemLayout}
                 label={(
                   <span>Name&nbsp;</span>
                 )}
@@ -54,7 +56,9 @@ function OrderInfo() {
                   <Input />,
                 )}
               </FormItem>
-              <FormItem className={styles.clientAddress} {...formItemLayout}
+              <FormItem
+                className={styles.clientAddress}
+                {...formItemLayout}
                 label={(
                   <span>Address&nbsp;</span>
                 )}
@@ -66,7 +70,9 @@ function OrderInfo() {
                   <Input />,
                 )}
               </FormItem>
-              <FormItem className={styles.clientPhone} {...formItemLayout}
+              <FormItem
+                className={styles.clientPhone}
+                {...formItemLayout}
                 label={(
                   <span>Phone&nbsp;</span>
                 )}
@@ -110,9 +116,9 @@ function OrderInfo() {
         </div>
         <hr />
         <div className={styles.detailContent}>
-          <OrderItem />
-          <OrderItem />
-          <OrderItem />
+          <OrderItem id="001"/>
+          <OrderItem id="002"/>
+          <OrderItem id="003"/>
         </div>
       </div>
       <WrappedRegistrationForm />
