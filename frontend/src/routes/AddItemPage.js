@@ -1,28 +1,25 @@
 /**
- * Created by paranoia on 2017/10/24.
+ * Created by wyj on 2017/11/14.
  */
 import React from 'react';
-import { Layout } from 'antd';
 import { connect } from 'dva';
+import { Layout } from 'antd';
 import Header from '../components/header/Header';
-import AdminContent from '../components/adminContent/AdminContent';
+import AddItemContent from '../components/addItemContent/AddItemContent';
 
 const Content = Layout.Content;
 
-class Admin extends React.Component {
+class AddItemPage extends React.Component {
   render() {
     return (
       <Layout style={{ backgroundColor: 'white' }}>
         <Header />
         <Content>
-          <AdminContent />
+          <AddItemContent />
         </Content>
       </Layout>
     );
   }
 }
 
-Admin.propTypes = {
-};
-
-export default connect()(Admin);
+export default connect()(AddItemPage);
