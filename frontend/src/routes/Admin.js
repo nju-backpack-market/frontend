@@ -12,17 +12,19 @@ const Content = Layout.Content;
 class Admin extends React.Component {
   render() {
     return (
-      <Layout style={{ backgroundColor: 'white' }}>
+      <Layout style={{ backgroundColor: 'white', height: '100%' }}>
         <Header />
         <Content>
-          <AdminContent />
+          <AdminContent productsList={this.props.productsList} />
         </Content>
       </Layout>
     );
   }
 }
 
-Admin.propTypes = {
-};
+function mapStateToProps(state) {
+  const { productsList } = state.admin;
+  return { productsList };
+}
 
-export default connect()(Admin);
+export default connect(mapStateToProps)(Admin);

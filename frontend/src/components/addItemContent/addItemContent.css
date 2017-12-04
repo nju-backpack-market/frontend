@@ -1,3 +1,6 @@
+:global textarea {
+  resize: none;
+}
 .addItemContentWrapper {
   width: 1024px;
   margin: 0 auto;
@@ -6,18 +9,24 @@
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  margin-left: 50%;
+  transform: translate(-50%, 0);
 }
 .flexLayoutArea {
   display: flex;
   justify-content: flex-start;
   margin: 20px 0;
+  margin-left: 50%;
+  transform: translate(-50%, 0);
 }
-.videoListItem {
-  background-color: #efefef;
-  padding: 20px;
-  margin-bottom: 20px;
-  max-width: 634px;
-  max-height: 356px;
-  margin: 0 auto;
-  font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+.videoItem {
+  margin-left: 60px;
+}
+.videoItem :global * {
+  box-sizing: content-box;
+}
+.flexLayoutBtnArea {
+  text-align: center;
+  margin-top: 80px;
+  margin-bottom: 100px;
 }

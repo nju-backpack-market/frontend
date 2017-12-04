@@ -4,6 +4,7 @@
 const config = {
   domain: 'https://123.206.119.37:8080',
   appName: 'Sansotta',
+  file: 'http://123.206.119.37:80/static',
 };
 
 export default config;

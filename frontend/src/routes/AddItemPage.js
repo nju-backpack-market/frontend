@@ -12,7 +12,7 @@ const Content = Layout.Content;
 class AddItemPage extends React.Component {
   render() {
     return (
-      <Layout style={{ backgroundColor: 'white' }}>
+      <Layout style={{ backgroundColor: 'white', minHeight: '100%' }}>
         <Header />
         <Content>
           <AddItemContent />

@@ -1,0 +1,21 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+.adminLoginContentWrapper {
+  width: 1024px;
+  margin: 0 auto;
+}
+.loginForm {
+  width: 400px;
+  margin: 0 auto;
+  margin-top: 140px;
+}
+.userTypeTitle {
+  font-size: 40px;
+  color: #9E8876;
+  text-align: center;
+  font-weight: 600;
+  margin-bottom: 30px;
+}

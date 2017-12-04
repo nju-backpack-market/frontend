@@ -23,14 +23,11 @@ function checkStatus(response) {
  * @return {object}           An object containing either "data" or "err"
  */
 export function request(url, options) {
-  // return fetch(url, options)
-  //   .then(checkStatus)
-  //   .then(parseJSON)
-  //   .then(data => {
-  //     console.log(data);
-  //   })
-  //   .catch(err => ({ err }));
-  console.log('sss');
+  return fetch(url, options)
+    .then(checkStatus)
+    .then(parseJSON)
+    .then(data => ({ data }))
+    .catch(err => ({ err }));
 }
 
 export const delay = time => new Promise(resolve => setTimeout(resolve, time));

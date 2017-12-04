@@ -33,7 +33,7 @@ class AdminContent extends React.Component {
             <OrderMangePane />
           </TabPane>
           <TabPane tab="商品管理" key="2">
-            <GoodsManagePane />
+            <GoodsManagePane productsList={this.props.productsList} />
           </TabPane>
         </Tabs>
       </div>

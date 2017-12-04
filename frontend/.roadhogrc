@@ -3,7 +3,14 @@
   "disableCSSModules": false,
   "theme": {
       "@primary-color": "#8b7567"
-    },
+  },
+  "proxy": {
+      "/api": {
+        "target": "https://123.206.119.37:8080/",
+        "changeOrigin": true,
+        "pathRewrite": { "^/api" : "" }
+      }
+  },
   "env": {
     "development": {
       "extraBabelPlugins": [

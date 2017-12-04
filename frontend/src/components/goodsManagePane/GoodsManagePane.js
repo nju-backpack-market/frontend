@@ -1,34 +1,30 @@
 import React from 'react';
 import { connect } from 'dva';
-import { Input, Button } from 'antd';
+import { Input, Button, Pagination } from 'antd';
 import GoodsManageItem from '../goodsManageItem/GoodsManageItem';
 import styles from './goodsManagePane.less';
 
 const Search = Input.Search;
 
 class GoodsManagePane extends React.Component {
+  onClickAddNewItem = () => {
+    window.location.href = '/admin-newPack';
+  };
   render() {
+    console.log(this.props.productsList);
     return (
       <div className={styles.goodsListWrapper}>
         <div style={{ display: 'flex', justifyContent: 'flex-end' }}>
-          <Button type="primary">添加商品</Button>
+          <Button type="primary" onClick={this.onClickAddNewItem}>添加商品</Button>
           <Search
             placeholder="商品编号"
             style={{ width: 200, marginLeft: 50 }}
           />
         </div>
         <div className={styles.goodsList}>
-          <GoodsManageItem />
-          <GoodsManageItem />
-          <GoodsManageItem />
-          <GoodsManageItem />
-          <GoodsManageItem />
-          <GoodsManageItem />
-          <GoodsManageItem />
-          <GoodsManageItem />
-          <GoodsManageItem />
-          <GoodsManageItem />
+          {this.props.productsList.length === 0 ? '' : this.props.productsList.map(product => <GoodsManageItem key={product.pid} productInfo={product} />)}
         </div>
+        <Pagination style={{ float: 'right' }} />
       </div>
     );
   }

@@ -7,6 +7,7 @@ import Homepage from './routes/Homepage';
 import ItemInfo from './routes/ItemInfo';
 import OrderInfo from './routes/OrderInfo';
 import AddItemPage from './routes/AddItemPage';
+import AdminLogin from './routes/AdminLogin';
 
 function Routers({ history }) {
   return (
@@ -18,6 +19,7 @@ function Routers({ history }) {
       </Route>
       <Route path="/admin" component={Admin} />
       <Route path="/admin-newPack" component={AddItemPage} />
+      <Route path="/admin-login" component={AdminLogin} />
     </Router>
   );
 }

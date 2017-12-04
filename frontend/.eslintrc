@@ -24,7 +24,9 @@
     "import/no-unresolved": [0],
     "require-yield": [1],
     "linebreak-style": "off",
-    "react/no-unescaped-entities": [0]
+    "react/no-unescaped-entities": [0],
+    "no-underscore-dangle": "off",
+    "no-unused-vars": "off"
   },
   "parserOptions": {
     "ecmaFeatures": {
