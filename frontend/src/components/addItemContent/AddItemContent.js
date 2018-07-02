@@ -34,6 +34,19 @@ class AddItemContent extends React.Component {
       message.error('商品价格格式错误!');
     } else {
       console.log('ok');
+      const newProduct = [{
+        name: this.state.itemName,
+        price: this.state.price,
+        description: this.state.itemDesc,
+        image: this.state.videoUrlList.length === 0 ? [...this.state.imageUrlList, ''] : [...this.state.imageUrlList, this.state.videoUrlList[0]],
+        on_sale: true,
+      }];
+      this.props.dispatch({
+        type: 'admin/fetchCreateProduct',
+        payload: {
+          newProduct,
+        },
+      });
     }
   };
 

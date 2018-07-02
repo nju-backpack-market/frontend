@@ -26,25 +26,25 @@ class AdminLoginContent extends React.Component {
     return (
       <div className={styles.adminLoginContentWrapper}>
         <div className={styles.loginForm}>
-          <div className={styles.userTypeTitle}>Admin</div>
+          <div className={styles.userTypeTitle}>管理端</div>
           <Form onSubmit={this.handleSubmit}>
             <FormItem>
               {getFieldDecorator('username', {
-                rules: [{ required: true, message: 'Please input your username!' }],
+                rules: [{ required: true, message: '请输入账号!' }],
               })(
-                <Input prefix={<Icon type="user" style={{ fontSize: 13 }} />} placeholder="Username" />,
+                <Input prefix={<Icon type="user" style={{ fontSize: 13 }} />} placeholder="账号" />,
               )}
             </FormItem>
             <FormItem>
               {getFieldDecorator('password', {
-                rules: [{ required: true, message: 'Please input your password!' }],
+                rules: [{ required: true, message: '请输入密码!' }],
               })(
-                <Input prefix={<Icon type="lock" style={{ fontSize: 13 }} />} placeholder="Password" type="password" />,
+                <Input prefix={<Icon type="lock" style={{ fontSize: 13 }} />} placeholder="密码" type="password" />,
               )}
             </FormItem>
             <FormItem>
               <Button type="primary" htmlType="submit" style={{ width: '100%' }}>
-                Login
+                登陆
               </Button>
             </FormItem>
           </Form>

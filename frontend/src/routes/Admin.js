@@ -12,10 +12,12 @@ const Content = Layout.Content;
 class Admin extends React.Component {
   render() {
     return (
-      <Layout style={{ backgroundColor: 'white', height: '100%' }}>
+      <Layout style={{ backgroundColor: 'white' }}>
         <Header />
         <Content>
-          <AdminContent productsList={this.props.productsList} />
+          <AdminContent
+            allOrders={this.props.allOrders}
+          />
         </Content>
       </Layout>
     );
@@ -23,8 +25,8 @@ class Admin extends React.Component {
 }
 
 function mapStateToProps(state) {
-  const { productsList } = state.admin;
-  return { productsList };
+  const { allOrders } = state.admin;
+  return { allOrders };
 }
 
 export default connect(mapStateToProps)(Admin);

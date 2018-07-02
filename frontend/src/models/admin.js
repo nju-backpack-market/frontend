@@ -10,7 +10,8 @@ export default {
   namespace: 'admin',
 
   state: {
-    productsList: [],
+    allOrders: [],
+    logisticInfoSucceed: false,
   },
 
   subscriptions: {
@@ -18,14 +19,7 @@ export default {
       return history.listen(({ pathname, query }) => {
         if (pathname === '/admin') {
           if (Tools.getToken()) {
-            dispatch({ type: 'fetchAllProducts', payload: query });
-          } else {
-            window.location.href = '/admin-login';
-          }
-        }
-        if (pathname === '/admin-newPack') {
-          if (Tools.getToken()) {
-            // TODO
+            dispatch({ type: 'fetchAllOrders', payload: 1 });
           } else {
             window.location.href = '/admin-login';
           }
@@ -50,22 +44,55 @@ export default {
       }
       console.log(Tools.getToken());
     },
-    *fetchAllProducts({ payload: { page = 1 } }, { call, put }) {
-      const result = yield call(adminService.getAllProducts, page);
+    *fetchAllOrders({ payload: page }, { call, put }) {
+      const result = yield call(adminService.getAllOrders, page);
+      console.log('orders', result);
       yield put({
-        type: 'saveAllProducts',
+        type: 'saveAllOrders',
         payload: {
-          productsList: result.data._embedded.products,
+          allOrders: result.data.data,
         },
       });
+    },
+    *fetchDelivery({ payload: info }, { call, put }) {
+      console.log(info);
+      const result = yield call(adminService.delivery, info);
       console.log(result);
-      console.log(Tools.getToken());
+      if (result.data) {
+        message.success('Succeed');
+        yield put({
+          type: 'saveLogisticInfo',
+          payload: {
+            logisticInfoSucceed: true,
+          },
+        });
+
+        const result2 = yield call(adminService.getAllOrders);
+        console.log('orders', result2);
+        yield put({
+          type: 'saveAllOrders',
+          payload: {
+            allOrders: result2.data.data,
+          },
+        });
+      } else {
+        message.error('Failed, please login again');
+        yield put({
+          type: 'saveLogisticInfo',
+          payload: {
+            logisticInfoSucceed: false,
+          },
+        });
+      }
     },
   },
 
   reducers: {
-    saveAllProducts(state, { payload: { productsList } }) {
-      return { ...state, productsList };
+    saveAllOrders(state, action) {
+      return { ...state, ...action.payload };
+    },
+    saveLogisticInfo(state, action) {
+      return { ...state, ...action.payload };
     },
   },
 

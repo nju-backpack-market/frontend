@@ -26,7 +26,8 @@
     "linebreak-style": "off",
     "react/no-unescaped-entities": [0],
     "no-underscore-dangle": "off",
-    "no-unused-vars": "off"
+    "no-unused-vars": "off",
+    "no-console":"off"
   },
   "parserOptions": {
     "ecmaFeatures": {

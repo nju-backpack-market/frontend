@@ -23,6 +23,7 @@ class AdminContent extends React.Component {
     });
   };
   render() {
+    console.log(this.props);
     return (
       <div className={styles.tabNav}>
         <Tabs
@@ -30,11 +31,15 @@ class AdminContent extends React.Component {
           onChange={this.onChangeTab}
         >
           <TabPane tab="订单管理" key="1">
-            <OrderMangePane />
+            <OrderMangePane allOrders={this.props.allOrders} />
           </TabPane>
-          <TabPane tab="商品管理" key="2">
-            <GoodsManagePane productsList={this.props.productsList} />
-          </TabPane>
+          {/* <TabPane tab="商品管理" key="2">*/}
+          {/* <GoodsManagePane*/}
+          {/* productsList={this.props.productsList}*/}
+          {/* totalItemPage={this.props.totalItem}*/}
+          {/* itemSize={this.props.itemSize}*/}
+          {/* />*/}
+          {/* </TabPane>*/}
         </Tabs>
       </div>
     );

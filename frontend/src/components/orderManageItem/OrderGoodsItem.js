@@ -5,36 +5,32 @@ import React from 'react';
 import { connect } from 'dva';
 import { Row, Col } from 'antd';
 import styles from './orderGoodsItem.less';
+import { getOrderStatus } from '../../utils/Tools';
 
 class OrderGoodsItem extends React.Component {
   render() {
+    const item = this.props.goodItem;
+    console.log(item);
     return (
       <div className={styles.orderGoodsItemWrapper}>
         <Row type="flex" justify="space-around" align="middle">
           <Col span={10}>
-            <Row type="flex" justify="space-around" align="middle">
-              <Col span={8}>
-                <img width="100" alt="" src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1508953487730&di=f2758e70d496d28cad02859a90a04fe7&imgtype=0&src=http%3A%2F%2Fimg002.hc360.cn%2Fy4%2FM06%2F9C%2FA9%2FwKhQiFVVmXGEBPTzAAAAAPx5M2A001.jpg" />
-              </Col>
-              <Col span={16}>
-                <div className={styles.bagName}>
-                  <div>32178071 红色登山包 xxxxxxx</div>
-                  <div>尺寸 300 * 600 * 400</div>
-                </div>
-              </Col>
-            </Row>
+            <div className={styles.bagName}>
+              <div>{item.name}</div>
+              {/* <div>尺寸 300 * 600 * 400</div>*/}
+            </div>
           </Col>
           <Col span={3}>
-            <div>$ 160</div>
+            <div>￥ {item.price}</div>
           </Col>
           <Col span={3}>
-            <div>2</div>
+            <div>{this.props.num}</div>
           </Col>
           <Col span={3}>
-            <div>$ 320</div>
+            <div>￥ {this.props.totalPrice}</div>
           </Col>
           <Col span={5}>
-            <div className={styles.orderState}>未发货</div>
+            <div>{getOrderStatus(this.props.status)}</div>
           </Col>
         </Row>
       </div>

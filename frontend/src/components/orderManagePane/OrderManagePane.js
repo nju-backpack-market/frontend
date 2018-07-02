@@ -18,24 +18,26 @@ class OrderManagePane extends React.Component {
   };
 
   render() {
+    console.log('Orders-----', this.props.allOrders);
     return (
       <div className={styles.orderManagePaneWrapper}>
+        {/* <div>*/}
+        {/* <Checkbox>待发货</Checkbox>*/}
+        {/* <Checkbox>待发货</Checkbox>*/}
+        {/* <Checkbox>待发货</Checkbox>*/}
+        {/* <Search*/}
+        {/* placeholder="订单号"*/}
+        {/* style={{ width: 250 }}*/}
+        {/* onSearch={value => console.log(value)}*/}
+        {/* />*/}
+        {/* </div>*/}
+        {/* <RangePicker />*/}
         <div>
-          <Checkbox>待发货</Checkbox>
-          <Checkbox>待发货</Checkbox>
-          <Checkbox>待发货</Checkbox>
-          <Search
-            placeholder="订单号"
-            style={{ width: 250 }}
-            onSearch={value => console.log(value)}
-          />
+          {this.props.allOrders.map((item) => {
+            return <OrderManageItem key={item.oid} item={item} />;
+          })}
         </div>
-        <RangePicker />
-        <div>
-          <OrderManageItem />
-          <OrderManageItem />
-        </div>
-        <Pagination />
+        {/* <Pagination />*/}
       </div>
     );
   }

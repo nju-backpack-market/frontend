@@ -6,7 +6,7 @@
   },
   "proxy": {
       "/api": {
-        "target": "https://123.206.119.37:8080/",
+        "target": "https://sansotta.cn/api",
         "changeOrigin": true,
         "pathRewrite": { "^/api" : "" }
       }
